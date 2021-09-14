@@ -1,0 +1,22 @@
+  
+name: Upload to Server
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Unaki Quiesioner update ( ex.starko.biz )"
+        uses: appleboy/ssh-action@master
+        with:
+          host: 'ex.starko.biz'
+          username: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd unakiv2.starko.biz
+            git pull git@github.com:elkoaditya/Quisioner.git master
+            git reset --hard
+            composer install
+            php artisan migrate
