@@ -49,6 +49,8 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/admin/users/update/{id}', [\App\Http\Controllers\UsersController::class, 'updateUser']);
         Route::post('/admin/users/update', [\App\Http\Controllers\UsersController::class, 'saveUpdate']);
 
+        Route::get('/admin/dwnlaporan', [\App\Http\Controllers\AdminController::class, 'dwlaporan']);
+
     });
     Route::group(['middleware' => ['AuthRole:mhs']], function () {
 

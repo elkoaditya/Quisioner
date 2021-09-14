@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Soal;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -38,6 +39,12 @@ class AdminController extends Controller
         } catch (\Exception $err){
             return redirect()->back()->with('message', 'Username & Password harap di Isi');
         }
+    }
+    public function dwlaporan(){
 
+        $soals = Soal::all();
+
+
+        return view('admin.dwlaporan', compact('soals'));
     }
 }
