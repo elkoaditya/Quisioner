@@ -45,7 +45,7 @@
                     <tr>
                         <th>Pertanyaan</th>
                         <th>Tipe Pertanyaan</th>
-                        <th>Jawaban</th>
+                        <th>Created By</th>
                         <th>Age</th>
                     </tr>
                 </thead>

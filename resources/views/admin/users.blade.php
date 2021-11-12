@@ -118,7 +118,6 @@
             <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancel</a>
                 <input type="submit" value="Save" class="waves-effect waves-green btn-flat ">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
             </div>
         </form>
     </div>
