@@ -35,8 +35,9 @@
                 <div id="sidebar-list" class="sidebar-menu list-group position-relative animate fadeLeft delay-1">
                     <div class="sidebar-list-padding app-sidebar sidenav" id="contact-sidenav">
                         <ul class="contact-list display-grid">
-                            <li class="sidebar-title">Filters</li>
-                            <li class=""><a class="text-sub modal-trigger" href="#modal1" ><i class="material-icons mr-2"> person_add </i> Tambah Mahasiswa</a></li>
+                            <li class="sidebar-title animate fadeLeft delay-1">Fiture</li>
+                            <li class=""><a class="text-sub modal-trigger animate fadeLeft delay-2" href="#modal1" ><i class="material-icons mr-2"> person_add </i> Tambah Mahasiswa</a></li>
+                            <li class=""><a class="text-sub modal-trigger animate fadeLeft delay-3" href="#modal2" ><i class="material-icons mr-2"> call_made </i> Export Excel</a></li>
                         </ul>
                     </div>
                 </div>
@@ -111,6 +112,25 @@
                         <div class="input-field">
                             <input id="last_name" type="text" class="validate" name="name">
                             <label for="last_name">Nama</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancel</a>
+                <input type="submit" value="Save" class="waves-effect waves-green btn-flat ">
+            </div>
+        </form>
+    </div>
+    <div id="modal2" class="modal">
+        <form method="post" action="/admin/users/add/excel" enctype="multipart/form-data">
+            @csrf
+            <div class="modal-content">
+                <h4>Export Excel</h4>
+                <div class="container" style="padding-left: 40px; padding-right: 40px;">
+                    <div class="row">
+                        <div class="input-field">
+                            <input id="last_name" type="file" class="validate" name="file">
                         </div>
                     </div>
                 </div>
